@@ -1,0 +1,692 @@
+/* Defaults
+-----------------------------------------------------------*/
+body{
+	width:100%;
+	margin:0 auto;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/* Fonts
+-----------------------------------------------------------*/
+@font-face {
+  font-family: 'Myriad Pro Light';
+  src: url('../type/MyriadPro-Light.otf');  
+}
+body{
+	font-family: 'Myriad Pro Light', sans-serif;
+	font-size: 16px;
+	color:#3d3833;
+}
+h2, h3, h4, h5, h6{
+	font-weight: normal;
+}
+/* Main Navigation
+-----------------------------------------------------------*/
+.main-top-nav{
+	display: none;
+	background-color: #cb1e3e;
+	padding: .5em 2.5em 2.5em;
+}
+.main-top-nav h5, .main-top-nav h5 a, .main-top-nav ul li a{
+	color:#fff;
+	font-size: 13px;
+}
+.main-top-nav h5 a:hover, .main-top-nav ul li a:hover, .bottom-nav ul li a:hover, .footer-nav li a:hover{
+	opacity: .5;
+}
+.main-top-nav ul li a{
+	line-height: 1.5em;
+}
+.main-top-nav h5{
+	line-height: .25em;
+	margin-bottom: 0;
+}
+.search-bar{
+	border:1px solid #fff;
+	margin-top: 2em;
+	max-width: 250px;
+	padding: 0 .5em;
+	line-height: 0;
+}
+.search-text{
+	opacity:.5;
+}
+/* Nav Bar
+-----------------------------------------------------------*/
+.nav-zone{
+	width: 100%;
+	z-index: 99;
+}
+.nav-bar{
+	width: 100%;
+	height:55px;
+	background-color: #fff;
+	display:flex;
+	justify-content:space-between;
+}
+.homepage-logo{
+	width:100%;
+	max-width: 180px;
+	margin-top: 1em;
+	margin-left: 2.25em;
+}
+.burger-nav{
+	width:18px;
+	margin-top: 20px;
+	margin-right: 2em;
+}
+.burger-nav-icon{
+	cursor: pointer;
+}
+.burger-nav-menu{
+	display:none;
+}
+.fixed {
+    position:fixed;
+    top:0;
+}
+/* Bottom Navigation
+-----------------------------------------------------------*/
+.bottom-nav ul li a{
+	font-size: .85em;
+	line-height: 2em;
+}
+.bottom-nav ul{
+	padding-bottom: 1.25em;
+}
+.bottom-nav-menu li a{
+	color:#9b9491;;
+}
+.bottom-nav-social li a{
+	color:#9b9491;
+}
+/* Footer
+-----------------------------------------------------------*/
+footer{
+	background-color:#eae8e7;
+	padding: 1.25em 0 4em 0;
+}
+.footer-nav li a{
+	font-size: .75em;
+	color:#3d3833;
+	line-height: 2em;
+}
+/* INDEX
+------------------------------------------------------------------------------------------------*/
+/* Header & Jumbotron
+-----------------------------------------------------------*/
+header{
+	padding: 0 1.5em 0 2.5em;
+}
+header h2{
+	width:90%;
+	font-size: 2em;
+}
+.jumbotron{
+	height: 284px;
+	overflow: hidden;
+	position: relative;
+}
+.jumbotron li{
+	height:284px;
+}
+.slideshow-arrow{
+	background-size: 100%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width: 33px;
+	height: 33px;
+	position: absolute;
+	top: 50%;
+}
+.slideshow-prev{
+	left: 0;
+	background-image: url('../img/slideshow-left.svg');
+}
+.slideshow-next{
+	right: 0;
+	background-image: url('../img/slideshow-right.svg');
+}
+.payments-slide{
+	background: url(../img/Stocksy_txp4e376db7oLn000_Original_367822.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.payments-slide h3, .other-slide h3{
+	padding:1.5em 2em 1.5em 1.75em;
+	color:#fff;
+	font-size: 1.35em;
+}
+.other-slide{
+	background: url(../img/Stocksy_txp4e376db7oLn000_Original_206256_RT.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.fx-jumbotron-button{
+	display:none;
+}
+.jumbotron-slideshow-buttons{
+	display: flex;
+	justify-content:space-between;
+}
+.jumbotron-footer{
+	background-color: #cb1e3e;
+	display: flex;
+	justify-content:space-between;
+	cursor: pointer;
+	padding: 1.25em 2.5em;
+}
+.jumbotron-footer p{
+	margin:0;
+	color:#fff;
+	font-size: .85em;
+	line-height: 1.5em;	
+}
+.jumbotron-footer .x{
+	margin-top: -5px;
+	font-size: 1.25em;
+}
+/*
+This is the visible area of you carousel.
+Set a width here to define how much items are visible.
+The width can be either fixed in px or flexible in %.
+Position must be relative!
+*/
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+}
+
+/*
+This is the container of the carousel items.
+You must ensure that the position is relative or absolute and
+that the width is big enough to contain all items.
+*/
+.jumbotron ul {
+    width: 20000em;
+    position: relative;
+
+    /* Optional, required in this case since it's a <ul> element */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+These are the item elements. jCarousel works best, if the items
+have a fixed width and height (but it's not required).
+*/
+.jumbotron li {
+    /* Required only for block elements like <li>'s */
+    float: left;
+    width: 100vw;
+}
+
+
+/* Linebreak Graphic
+-----------------------------------------------------------*/
+.linebreak-graphic{
+	height:57px;
+	background-image: url(../img/arrow-graphic2.svg);
+	background-repeat: no-repeat;
+	background-size: 96px;
+}
+.linebreak-one{
+	background-position: bottom left;
+}
+.linebreak-two{
+	background-position: bottom right;
+}
+/* Homepage Blocks
+-----------------------------------------------------------*/
+.module{
+	height:275px;
+	display: flex;
+	flex-direction:column;
+	line-height:1.5em;
+	background-image: url('../img/arrow-graphic-small.svg');
+	background-position: bottom right;
+	background-size: 35px;
+	background-repeat: no-repeat;
+	transition: all .5s ease-in-out;
+}
+.module:hover, .module2:hover{
+	cursor: pointer;
+	background-color: #3d3833;
+	color:#fff;
+}
+.module h4, .module2 h4{
+	padding-top: 1em;
+	padding-left: 2.35em;
+}
+.module p, .module2 p{
+	width:75%;
+	padding: 0 2.75em;	
+	margin:0;
+	font-size: .85em;
+	line-height:1.35em;
+}
+.module br{
+	line-height: 2em;
+}
+.about-text{
+	margin-top: -15px;
+}
+.about-text p{	
+	padding:2.5em 2.5em 3.5em 2.5em;
+	line-height:1.25em;
+}
+.about-text, .platforms{
+	background-color: #f4f4f4;
+	padding-bottom: 3em;
+}
+.services, .sign-up{
+	background-color: #ebe9e8;
+}
+.small-arrow-graphic{
+	width:35px;
+	align-self:flex-end;
+}
+.bridge-photo{
+	width:100%;
+}
+.homepage-quote{	
+	background-color: #3d3833;
+	background-image: none;
+	margin-top: -7px;
+	color:#fff;
+}
+.homepage-quote p{
+	width: 70%;
+	padding:3em 2.5em;
+	font-size: 1.05em;	
+}
+.sign-up p{
+	padding-left: 2.65em;
+	font-size: 1em;
+}
+/* Media Queries Tablet/iPad
+-----------------------------------------------------------*/
+@media screen and (min-width: 1024px){
+	body{
+		font-size: 1.15em;
+	}
+	/* Main Navigation */
+	.top-nav-menu{
+		display: flex;
+		flex-direction:row;
+	}
+	.main-top-nav h5, .main-top-nav h5 a, .main-top-nav ul li a{
+		font-size: 14px;
+	}
+	.top-nav-module{
+		width:14%;
+	}
+	.top-nav-module ul li{
+		padding-top:.5em;
+		margin-left: -40px;
+	}
+	.top-nav-social{
+		width:100%;
+		display: flex;
+		flex-direction:row;
+	}
+	/* Nav Bar */
+	.homepage-logo{
+		width: 100%;
+		max-width: 252px;
+	}
+	.burger-nav{
+		display: flex;
+		justify-content:space-between;
+		width: 97px;
+	}
+	.burger-nav-icon{
+		width: 20px;
+		align-self:flex-start;
+		padding-top: 5px;
+	}
+	.burger-nav-menu{
+		display:inline-block;
+		cursor: pointer;
+		font-size: 1.5em;
+		margin: 0;
+	}
+	/* Header & Jumbotron */
+	header h2{
+		font-size: 3.5em;
+		width:50%;
+		padding-left: 115px;
+		margin: 75px 0 40px;
+	}
+	.payments-slide h3{
+		width: 35%;
+		font-size: 2.25em;
+		margin-left: 50%;
+		padding: 0;
+		padding-top: 2em;
+	}
+	.other-slide h3{
+		width: 35%;
+		font-size: 2.25em;
+		margin-left: 115px;
+	}
+
+	.jumbotron-slide{
+		height: 395px;
+	}
+	.slideshow-arrow{
+		background-size: 100%;
+		width: 75px;
+		height: 75px;
+	}
+	.fx-jumbotron-button{
+		width:36.5%;
+		max-width: 333px;
+		background-color: #00a0df;
+		display: block;
+		cursor: pointer;
+		margin-left: 50%;
+		margin-bottom: 5em;
+		padding: 0.05em 2.25em;
+		transition: all .25s ease-in-out;
+	}
+	.fx-jumbotron-button:hover{
+		background-color: #3d3833;
+	}
+	.fx-jumbotron-button p{
+		color:#fff;
+	}
+	.jumbotron-footer{
+		padding: .75em 0 .75em 2.25em;
+	}
+	.jumbotron-footer p{
+		font-size: 1em;
+		padding-left: 10%;
+	}
+	.jumbotron-footer .x{
+		margin-right: 2em;
+	}
+	/* Homepage Blocks */
+	section{
+		width: 100%;
+		display: flex;
+	}
+	.desktop-blank-module{
+		width: 25%;
+	}
+	.about-text{
+		width: 50%;
+		margin-top: 0;
+		font-size: 1.25em;
+	}
+	.about-text p{
+		width: 80%;
+		margin:0;
+		line-height: 1.5em;
+	}
+	.module{
+		width: 25%;
+		height:432px;
+		background-size: 50px;
+	}
+	.module p, .module2 p{
+		width: 70%;
+	}
+	.module2 p{
+		padding-left: 2.75em;
+	}
+	.small-arrow-graphic{
+		width: 45px;
+	}
+	.platforms{
+		padding-bottom: 0;
+	}
+	.bridge-photo{
+		width:50%;
+		height:432px;
+	}
+	.homepage-quote{
+		margin-top: 0;
+		font-size: 1.15em;
+		line-height: 2em;
+	}
+	/* Linebreak Graphic */
+	.linebreak-graphic{
+		height:auto;
+		background-image: url(../img/arrow-graphic2.svg);
+		background-repeat: no-repeat;
+		background-size: 290px;
+	}
+	.linebreak-one{
+		width: 50%;
+	}
+	.linebreak-two{
+		width: 100%;
+		display: block;
+		height:182px;
+		background-position: 50% 0;
+		margin-bottom: 100px;
+	}
+/* Bottom Navigation */
+	.bottom-nav{
+		width:100%;
+	}
+	.bottom-nav ul{
+		width: 100%;
+		display: flex;
+		padding-right: 2em;
+	}
+	.bottom-nav ul li{
+		width: 14%;
+	}
+	.bottom-nav-menu li a{
+		color:#3d3833;
+	}
+	/* Footer */
+	.footer-nav{	
+		width: 100%;
+		display:flex;
+	}
+	footer{
+		width: 100%;
+		padding:.25em 2em .25em 0;
+	}
+	.footer-nav li{
+		width: 14%;
+	}
+	.forty{
+		margin-left: -14%;
+	}
+}
+/* Jumbotron height*/
+@media screen and (min-width: 750px){
+	.jumbotron{
+		height:55vh;
+	}
+	.jumbotron li{
+		height:55vh;
+	}
+}
+/* Media Queries Desktop
+-----------------------------------------------------------*/
+@media screen and (min-width: 1600px){
+	/* Main Navigation */
+	body{
+		font-size: 1.35em;
+	}
+	/* Nav Bar */
+	.burger-nav{
+		width: 110px;
+	}
+	/* Header & Jumbotron */
+	header h2{
+		font-size: 4.5em;
+		width: 45%;
+		margin: 120px 0 80px;
+	}
+}
+/* OUR SERVICES
+------------------------------------------------------------------------------------------------*/
+/* Header
+-----------------------------------------------------------*/
+.our-services-header{
+	padding: 1em 2.5em 0;
+}
+.our-services-header h2{
+	font-size: 1.45em;
+}
+.our-services-header p{
+	padding-bottom: 2em;
+	font-size: 1.15em;
+}
+
+/* Our Services Content
+-----------------------------------------------------------*/
+.ourservices-icons{
+	width:56px;
+	margin: 2.5em 2.25em;
+}
+.module2{
+	height:275px;
+	display: flex;
+	flex-direction:column;
+	line-height:1.5em;
+	background-image: url('../img/arrow-graphic-small.svg');
+	background-position: bottom right;
+	background-size: 35px;
+	background-repeat: no-repeat;
+	transition: all .5s ease-in-out;
+}
+.wholesale{
+	background-color: #EBEBEA;
+}
+.forex, .commodities{
+	background-color: #F0F1F0;
+}
+.fx{
+	background-color: #F8F8F8;
+	border-top: 12px solid #00a0df;
+	height:375px;
+}
+.fx h3{
+	font-size: 1.25em;
+	padding: 0 2em;
+}
+.fx p{
+	font-size: 1.15em;
+	padding-left: 2.35em;
+}
+.fx-icon{
+	margin-left: 2.75em;
+}
+.forex{
+	border-top: 12px solid #f6323e;
+}
+.wholesale{
+	border-top: 12px solid #ff5000;
+}
+.commodities{
+	border-top: 12px solid #f6b332;
+}
+.icon-container{
+	width: 100%;
+	display: flex;
+}
+.ce-icons{
+	width:56px;
+	margin: 0;
+	padding-top: 2em;
+	padding-left: 2.25em;
+}
+.linebreak-three{
+	background-position: bottom right;
+	margin-bottom: 134px
+}
+.linebreak-graphic-single{
+	height:61px;
+	background-image: url(../img/arrow-graphic.svg);
+	background-repeat: no-repeat;
+	background-size: 48px;
+}
+.linebreak-four{
+	background-position: 56px 0;
+}
+@media screen and (min-width: 1024px){
+	.our-services-header{
+		width:57%;
+	}
+	.our-services-header h2{
+		font-size: 3.25em;
+		line-height: 1.05em;
+		padding-left: 10%;
+		margin: 40px 0;
+	}
+	.our-services-header p{
+		padding-left: 10%;
+		margin-bottom: 40px;
+		line-height: 1.35em;
+	}
+	.fx{
+		width: 50%;
+	}
+	.module2{
+		width: 33.33%;
+		width: calc(100%/3);
+		height:375px;
+		background-size: 50px;
+	}
+	.module h4{
+		font-size: 1.15em;
+	}
+	.module p{
+		font-size: 1em;
+	}
+	.ourservices-icons{
+		width:75px;
+		margin:6em 2.65em 0;
+	}
+	.ce-icons{
+		width:98px;
+		padding: 0;
+		margin-top: 6em;
+		margin-left: 0;
+	}
+	.c-icon-desktop{
+		margin-left: 2em;
+	}
+	.linebreak-three{
+		width: 50%;
+		background-position: top right;
+	}
+	.linebreak-graphic-single{
+		height:177px;
+		background-size: 150px;
+	}
+	.linebreak-four{
+		background-position: 173px 0;
+		margin-bottom: 100px;
+	}
+}
+/* Media Queries Desktop
+-----------------------------------------------------------*/
+@media screen and (min-width: 1600px){
+	/* Header & Jumbotron */
+	.our-services-header{
+		width: 49%;
+		margin-bottom: 100px;
+	}
+	.our-services-header h2{
+		font-size: 4em;
+	}
+}
+
+
+
+
+
+
